@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import What from './what';
 
 class App extends Component {
   render() {
@@ -16,18 +17,6 @@ class App extends Component {
       // </div>
       <What />
     );
-    function What() {
-      return (
-        <div>
-          <h2>Count Up</h2>
-          <ul>
-            <li>Vwan</li>
-            <li>Tooo</li>
-            <li>Sree</li>
-          </ul>
-        </div>
-      )
-    }
   }
 }
 
