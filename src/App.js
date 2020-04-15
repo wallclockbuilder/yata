@@ -6,9 +6,39 @@ import What from './what';
 class App extends Component {
   render() {
     return (
-      <What />
+      <div>
+        <NavBar />
+        <MainContent />
+        <Footer />
+      </div>
     );
-  }
+  
+    function NavBar() {
+      return (
+        <div>
+          <span>Home</span>
+          <span>Contact Us</span>
+          <span>Team</span>
+        </div>
+      )
+    }
+
+    function MainContent() {
+      return (
+        <What />
+        )
+    }
+
+    function Footer() {
+      return (
+        <div>
+          <span>Phone</span>
+          <span>Address</span>
+          <span>Fax</span>
+        </div>
+      )
+    }  
+ }
 }
 
 export default App;
