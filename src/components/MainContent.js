@@ -1,11 +1,11 @@
 import React from "react";
-import What from "./What";
+import Countdown from "./Countdown";
 import Reminders from "./Reminders"
 
 function MainContent() {
     return (
         <div>
-            <What />
+            <Countdown />
             <Reminders />
         </div>
     )    
