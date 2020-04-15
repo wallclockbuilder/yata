@@ -1,4 +1,5 @@
 import React from "react";
+import Reminder from "./Reminder";
 
 function Reminders() {
         return (
@@ -8,15 +9,6 @@ function Reminders() {
                 <Reminder name="cocoa" />
                 <Reminder name="gas" />
             </div>
-        )
-    }
-
-    function Reminder(props) {
-        return (
-            <p>
-                <input type="checkbox" id={props.name} />
-                <label for={props.name}>{props.name}</label>
-            </p>
         )
     }
     export default Reminders;
