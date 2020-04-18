@@ -1,18 +1,29 @@
-import React from "react";
-import Reminder from "./Reminder";
-import reminderData from "../reminderData";
+import React from 'react'
+import ReminderData from "../reminderData"
+import Reminder from "./Reminder"
 
-const reminderList = reminderData.map(function(datum) {
-    return <Reminder name={datum.item} key={datum.id} />;
-})
+class Reminders extends React.Component {
+    constructor(){
+        super()
+        this.state = {
+            reminderData: ReminderData
+        }
+    }
 
-function Reminders() {
-    return (
+    render(){
+        const reminderList =  this.state.reminderData.map(
+            function (datum) {
+                return <Reminder name={datum.item} key={datum.id} />
+            }
+        )
+        
+        return (
             <div>
                 <h2>Don't forget to buy:</h2>
                 {reminderList}
             </div>
         )
+    }
 }
 
 export default Reminders;
