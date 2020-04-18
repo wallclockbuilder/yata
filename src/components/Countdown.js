@@ -5,9 +5,9 @@ function Countdown() {
         <div> 
             <h2>Countdown</h2>
             <ul>
-                <li>Vwan</li>
-                <li>Tooo</li>
-                <li>Sree</li> 
+                <li>Einz</li>
+                <li>Zwei</li>
+                <li>Drei</li> 
             </ul>
         </div>
     )
