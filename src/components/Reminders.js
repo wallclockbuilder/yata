@@ -1,29 +1,34 @@
-import React from 'react'
+import React , {useState} from 'react'
 import ReminderData from "../reminderData"
 import Reminder from "./Reminder"
 
-class Reminders extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            reminderData: ReminderData
-        }
+const Reminders = () => {
+    const [check, setCheck] = useState(ReminderData)
+
+    const newCheck = (id) => {
+        let newCheck = [...check]
+        newCheck[id].ticked = !newCheck[id].ticked
+        return newCheck
     }
 
-    render(){
-        const reminderList =  this.state.reminderData.map(
-            function (datum) {
-                return <Reminder name={datum.item} key={datum.id} />
-            }
-        )
-        
-        return (
-            <div>
-                <h2>Don't forget to buy:</h2>
-                {reminderList}
-            </div>
-        )
-    }
+    let reminderList = check.map(
+        function (datum) {
+            return <Reminder
+                name={datum.item}
+                id={datum.id}
+                key={datum.id}
+                checked={datum.ticked}
+                onChange={() => setCheck(newCheck(datum.id))}
+            />
+        }
+    )
+    
+    return ( 
+        <div>
+            <h2>Don't forget to buy:</h2>
+            {reminderList}
+        </div>
+    )
 }
 
 export default Reminders;
