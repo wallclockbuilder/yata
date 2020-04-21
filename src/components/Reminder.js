@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Reminder(props) {
+    const checkStyle={textDecoration: 'line-through'}
     return (
         <p>
             <input 
@@ -9,8 +10,12 @@ function Reminder(props) {
                 key={props.id}
                 checked={props.checked} 
                 onChange={props.onChange}
+                
             />
-            <label >{props.name}</label>
+            <label 
+                style={props.checked ? checkStyle : null} >
+                {props.name}
+            </label>
         </p>
     )
 }
