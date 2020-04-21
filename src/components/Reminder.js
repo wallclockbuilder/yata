@@ -7,16 +7,17 @@ function Reminder(props) {
     }
     return (
         <p>
-            <input 
-                type="checkbox" 
-                id={props.id}
-                key={props.id}
-                checked={props.checked} 
-                onChange={props.onChange}
-                
-            />
+            
             <label 
                 style={props.checked ? checkStyle : null} >
+                <input 
+                    type="checkbox" 
+                    id={props.id}
+                    key={props.id}
+                    checked={props.checked} 
+                    onChange={props.onChange}
+            
+                />
                 {props.name}
             </label>
         </p>
