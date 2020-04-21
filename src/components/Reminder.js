@@ -1,7 +1,10 @@
 import React from 'react';
 
 function Reminder(props) {
-    const checkStyle={textDecoration: 'line-through'}
+    const checkStyle={
+        textDecoration: 'line-through',
+        color: 'gray'
+    }
     return (
         <p>
             <input 
