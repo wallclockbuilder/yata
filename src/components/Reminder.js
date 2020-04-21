@@ -13,9 +13,6 @@ function Reminder(props) {
             <label >{props.name}</label>
         </p>
     )
-    // function clickHandler(){
-    //     console.log("clicked")
-    // }
 }
 
 export default Reminder;
