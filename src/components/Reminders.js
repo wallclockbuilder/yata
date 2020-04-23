@@ -3,25 +3,25 @@ import ReminderData from "../reminderData"
 import Reminder from "./Reminder"
 
 const Reminders = () => {
-    const [check, setCheck] = useState(ReminderData)
-
-    const newCheck = (id) => {
-        let newCheck = [...check]
-        newCheck[id].ticked = !newCheck[id].ticked
-        return newCheck
+    const [todos, setTodos] = useState(ReminderData)
+    const newTodos = (id) => {
+        let newTodos = [...todos]
+        newTodos[id].ticked = !newTodos[id].ticked
+        return newTodos
     }
 
-    let reminderList = check.map(
+    let reminderList = todos.map(
         function (datum) {
             return <Reminder
                 name={datum.item}
                 id={datum.id}
                 key={datum.id}
                 checked={datum.ticked}
-                onChange={() => setCheck(newCheck(datum.id))}
+                onChange={() => setTodos(newTodos(datum.id))}
             />
         }
     )
+
     
     return ( 
         <div>
